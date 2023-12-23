@@ -2870,13 +2870,13 @@ button.btn.btn-solid:active, button.btn.btn-outline:active {
 .collection-banner.christmas-banner .contain-banner h5 {
 	font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 700;
-    color: #777;
+    color: #000;
     letter-spacing: 0.1em;
     margin-bottom: 0
 }
 .collection-banner.christmas-banner .contain-banner h4 {
     font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
-    color: #777;
+    color: #000;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -2885,7 +2885,7 @@ button.btn.btn-solid:active, button.btn.btn-outline:active {
 .collection-banner.christmas-banner .contain-banner h2 {
     font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 700;
-    color: #777;
+    color: #000;
     letter-spacing: 0.1em;
     margin-bottom: -6px
 }
@@ -8612,6 +8612,9 @@ header.header-style .onhover-dropdown:before {
     position: relative;
     font-size: 14px
 }
+.onhover-show-div a{
+	color: #222222;
+}
 .onhover-dropdown .onhover-show-div {
     top: 50px;
     position: absolute;
@@ -8638,7 +8641,7 @@ header.header-style .onhover-dropdown:before {
     opacity: 1;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
-    visibility: visible
+    visibility: visible;
 }
 .onhover-div {
     position: relative;
@@ -11930,14 +11933,19 @@ header.stickycls {
     .main-menu .menu-right .icon-nav .mobile-search .show-div .form-inline button i {
         display: inline-block
     }
+    .main-nav-center .toggle-nav {
+        right: 30px;
+    }
+	.layout2-logo {
+    padding-right: 0!important;
+	}
 }
 @media (max-width: 577px) {
     .top-header {
         height: 0
     }
     .main-nav-center .toggle-nav {
-		
-        right: 15px;
+        right: 30px;
 		/*---------*
         top: -78px
 		/*---------*/
@@ -12006,8 +12014,8 @@ header.stickycls {
         content: "\e634"
     }
     .main-menu {
-        padding-top: 80px!important;
-        padding-bottom: 30px!important;
+        padding-top: 55px!important;
+        padding-bottom: 55px!important;
     }	
     .main-menu .menu-left.category-nav-right .navbar {
         padding-left: 0 !important
@@ -12089,11 +12097,10 @@ header.stickycls {
         padding-top: 25px;
         padding-bottom: 25px
     }
-
 }
 @media (max-width: 480px) {
     .brand-logo img {
-        height: 25px
+        height: 100px
     }
 }
 .ribbon-1 {
@@ -12960,7 +12967,7 @@ header.stickycls {
     font-weight: 600;
     color: #222;
     text-transform: capitalize;
-    max-width: 200px;
+    /*---*max-width: 200px;/*---*/
     line-height: 36px
 }
 .product-left-title p {
@@ -15865,19 +15872,20 @@ header.stickycls {
     top: -45px
 }
 .team .slick-prev:before, .team .slick-next:before {
-    font: normal normal normal 30px/1 FontAwesome;
-    color: #222;
-    opacity: 0.6
+    font: normal normal normal 40px/1 FontAwesome;
+    color: #EC0000;
+	font-weight: 800;
+    /*---*opacity: 0.6/*---*/
 }
 .team .slick-prev {
-    left: unset;
-    right: 20px
+    left: 5%;
+    /*---*right: 20px/*---*/
 }
 .team .slick-prev:before {
     content: "\f104"
 }
 .team .slick-next {
-    right: 0
+    right: 5%;
 }
 .team .slick-next:before {
     content: "\f105"
@@ -15885,7 +15893,7 @@ header.stickycls {
 .team h2 {
     color: #222;
     padding-bottom: 15px;
-    border-bottom: 1px solid #dddada;
+    /*----*border-bottom: 1px solid #dddada;/*----*/
     margin-bottom: 10px
 }
 .team h4, .team h6 {
@@ -23741,7 +23749,7 @@ body.dark {
         letter-spacing: 0.01em
     }
     .collection-banner.christmas-banner .contain-banner > div {
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: rgba(255, 255, 255, 0.25);
         padding: 25px 40px
     }
     .footer-theme2 .contact-details li {
@@ -24424,7 +24432,7 @@ body.dark {
         padding-top: 5px
     }
     .full-banner .santa-img img {
-        width: 200px
+        width: 350px
     }
     .full-banner.feature-banner .feature-object li, .full-banner.feature-banner .feature-object-right li {
         margin-right: 0
@@ -24858,12 +24866,20 @@ body.dark {
         margin-right: 10px
     }
 }
+@media (min-width: 1200px) {
+	.section-b-space-custom {
+       padding-top: 80px!important;
+    }
+}
 @media (min-width: 992px) {
     .demo-modal .modal-lg {
         max-width: 1400px
     }
     .exit-modal .modal-lg {
         max-width: 600px
+    }
+	.section-b-space-custom {
+       padding-top: 150px
     }
 }
 @media (max-width: 991px) and (min-width: 767px) {
@@ -24883,6 +24899,9 @@ body.dark {
     }
     section, .section-t-space {
         padding-top: 50px
+    }
+	.section-b-space-custom {
+        padding-top: 180px
     }
     .section-b-space {
         padding-bottom: 50px
@@ -26386,6 +26405,9 @@ body.dark {
     .section-b-space {
         padding-bottom: 40px
     }
+	.section-b-space-custom {
+        padding-top: 220px;
+    }
     .portfolio-padding {
         padding-bottom: 10px
     }
@@ -26934,7 +26956,7 @@ body.dark {
         font-size: 75px
     }
     .full-banner .santa-img img {
-        width: 125px
+        width: 245px
     }
     .pet-parallax .full-banner {
         padding-top: 120px;
@@ -29002,6 +29024,10 @@ body.dark {
         line-height: 1;
         margin-top: 10px
     }
+    .full-banner .santa-img img {
+        width: 175px;
+		padding-bottom: 40px!important;
+    }	
 }
 @media (max-width: 480px) {
     .title1 .title-inner1 {
@@ -29110,7 +29136,7 @@ body.dark {
         left: 10px
     }
     .full-banner .santa-img img {
-        width: 76px
+        width: 150px
     }
     .pet-parallax .full-banner {
         padding-top: 40px;
@@ -32604,6 +32630,9 @@ body.rtl .account-setting {
     .rtl .cart_counter .cart_checkout {
         margin-right: 0
     }
+    .section-b-space-custom {
+        padding-top: 340px
+    }	
 }
 @media (max-width: 420px) {
     .rtl .full-box .center-slider .offer-slider .product-box {
