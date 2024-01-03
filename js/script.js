@@ -1500,14 +1500,21 @@
         autoplay: true,
         autoplaySpeed: 5000,
         arrows: false,
-        responsive: [{
+        responsive: [
+			{
             breakpoint: 1199,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2
             }
-        }
-        ]
+		},
+			{
+            breakpoint: 578,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+		}]
     });
 
     $('.vertical-slider').slick({

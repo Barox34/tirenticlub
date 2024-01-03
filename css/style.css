@@ -2907,8 +2907,8 @@ button.btn.btn-solid:active, button.btn.btn-outline:active {
     opacity: 0.3
 }
 .collection-banner:hover .img-part {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease
 }
@@ -11169,7 +11169,7 @@ header.stickycls {
 .pixelstrap.light-font-menu li > a {
     color: #393230
 }
-.pixelstrap a, .pixelstrap a:hover, .pixelstrap a:active {
+.pixelstrap a, .pixelstrap a:hover, .pixelstrap-active a:active {
     padding-right: 45px;
     color: #222;
     font-size: 16px;
@@ -12751,11 +12751,11 @@ header.stickycls {
     outline: none
 }
 .logo-block img {
-    -webkit-filter: grayscale(100%);
+   /*---* -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     opacity: 0.5;
     -webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
+    transition: 0.5s ease;/*---*/
     margin: 0 auto
 }
 .logo-block img:focus {
@@ -24870,6 +24870,9 @@ body.dark {
 	.section-b-space-custom {
        padding-top: 80px!important;
     }
+    .product-left-title .slick-custom-arrow li.right-arrow {
+        margin-bottom: -20px!important;			
+    }	
 }
 @media (min-width: 992px) {
     .demo-modal .modal-lg {
@@ -26051,6 +26054,20 @@ body.dark {
     }
     .loader_skeleton .blog-page .order-sec .product-box .img-wrapper {
         width: 100%
+    }
+    .product-left-title .slick-custom-arrow i {
+        font-size: 26px
+    }
+    .product-left-title .slick-custom-arrow li {
+        width: 32px;
+        height: 32px;
+    }
+    .product-left-title .slick-custom-arrow li.right-arrow {
+        margin-left: 8px;			
+    }
+    .product-left-title .slick-custom-arrow li.left-arrow {
+        margin-left: 8px;	
+		margin-top: -10px
     }
 }
 @media (max-width: 767px) {
@@ -27564,6 +27581,9 @@ body.dark {
         display: block;
         width: 100%
     }
+    .product-left-title .slick-custom-arrow i {
+        font-size: 20px
+    }	
 }
 @media (max-width: 577px) {
     .header-style-1 .main-menu {
@@ -28572,12 +28592,15 @@ body.dark {
         padding: 13px
     }
     .product-left-title .slick-custom-arrow li {
-        width: 28px;
-        height: 28px;
+        width: 25px;
+        height: 25px;
+    }
+    .product-left-title .slick-custom-arrow li.right-arrow {
+        margin-left: 8px
     }
     .product-left-title .slick-custom-arrow li.left-arrow {
-        margin-right: 6px
-    }
+        margin-left: 8px
+    }	
     .product-left-title .slick-custom-arrow i {
         font-size: 20px
     }
@@ -29005,6 +29028,10 @@ body.dark {
     .layout-8 .loader_skeleton {
         padding: 0 0
     }
+    .full-banner .santa-img img {
+        width: 175px;
+		padding-bottom: 40px!important;
+    }	
 }
 @media (max-width: 575px) {
     .breadcrumb-section .page-title {
@@ -29023,10 +29050,6 @@ body.dark {
         padding: 0;
         line-height: 1;
         margin-top: 10px
-    }
-    .full-banner .santa-img img {
-        width: 175px;
-		padding-bottom: 40px!important;
     }	
 }
 @media (max-width: 480px) {
@@ -29132,7 +29155,7 @@ body.dark {
         font-size: 18px
     }
     .full-banner .santa-img {
-        bottom: -20px;
+        bottom: -60px;
         left: 10px
     }
     .full-banner .santa-img img {
@@ -29932,6 +29955,12 @@ body.dark {
     .gradient-category .gradient-border {
         height: 140px
     }
+	.full-banner .santa-img {
+        width: 140px
+    }
+    .full-banner .santa-img img {
+		padding-bottom: 35px!important;
+    }		
 }
 @media (max-width: 360px) {
     .btn-solid, .btn-outline {
@@ -30175,6 +30204,9 @@ body.dark {
     .gradient-category .gradient-border {
         height: 130px
     }
+	.full-banner .santa-img {
+        width: 110px
+    }	
 }
 @media (max-width: 320px) {
     .home-slider .slider-details {
@@ -30214,6 +30246,9 @@ body.dark {
     }
     .gradient-category .gradient-border {
         height: 120px
+    }
+	.full-banner .santa-img {
+        width: 100px
     }
 }
 body.rtl {
@@ -30582,7 +30617,7 @@ body.rtl {
 }
 .rtl .full-banner .santa-img {
     left: unset;
-    right: 28px
+    right: 28px;
 }
 .rtl .full-banner.feature-banner .feature-object, .rtl .full-banner.feature-banner .feature-object-right {
     text-align: left
@@ -32392,6 +32427,16 @@ body.rtl .account-setting {
 	.footer-yazi p{
 		text-align: center!important;
 	}
+	.shoes-boots img{
+		width: 12%;
+	}	
+	.shoe-svg{
+		rotate: y -180deg;
+        text-align: right;
+	}
+	.shoe-pic{
+		padding-top: 20px
+	}	
 }
 @media (max-width: 767px) {
     .rtl header.left-header .main-menu .menu-right .icon-nav li {
@@ -32480,6 +32525,15 @@ body.rtl .account-setting {
 		background: #fff; 
 		padding: 20px;
 		margin-bottom: 25px;
+	}
+	.team .slick-prev:before, .team .slick-next:before {
+	    font: normal normal normal 30px/1 FontAwesome;
+	    color: #EC0000;
+		font-weight: 800;
+	}	
+	.product-left-title h3{
+		font-size: 18px;
+		line-height: 25px
 	}
 }
 @media (max-width: 577px) {
@@ -32593,13 +32647,6 @@ body.rtl .account-setting {
     .rtl footer .subscribe-form.rounded-input .btn-solid {
         border-radius: 20px
     }
-	.shoe-svg{
-		rotate: y -180deg;
-        text-align: right
-	}
-	.shoe-pic{
-		padding-top: 20px
-	}
 	.section-christmas{
 	padding-top: 60px!important;
 	padding-bottom: 70px;		
@@ -32654,12 +32701,29 @@ body.rtl .account-setting {
     .rtl .center-slider .offer-slider .product-box .product-detail {
         text-align: right !important
     }
+	.team .slick-prev, .team .slick-next {
+	    position: absolute;
+	    top: -30px
+	}
 }
 @media (max-width: 360px) {
     .rtl .timer span .padding-l {
         padding-right: 10px
     }
+	.team .slick-prev:before, .team .slick-next:before {
+	    font: normal normal normal 25px/1 FontAwesome;
+	    color: #EC0000;
+		font-weight: 800;
+	}	
+	.shoes-boots img {
+    width: 16%;
 }
+}
+@media (max-width: 280px) {
+		.shoes-boots img {
+    width: 24%;
+}
+}	
 
 /*---------------------------------------*/
 
